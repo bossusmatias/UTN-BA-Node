@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `Books` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `Books`;
 -- MySQL dump 10.13  Distrib 8.0.25, for Linux (x86_64)
 --
 -- Host: 127.0.0.1    Database: Books
@@ -99,6 +101,14 @@ LOCK TABLES `personas` WRITE;
 INSERT INTO `personas` VALUES (1,'Juan','Perez','juanperez@juanperez.com','JuanP'),(2,'Diego','Rodriguez','diego@rodriguez.com','DiegoR'),(3,'Lucas','Garzon','lucas@garzon.com','LucasG'),(4,'Matias','Lopez','matias@lopez.com','MatiasL'),(5,'Maxi','Rodriguez','maxi@rodriguez.com','Maxi'),(6,'Nicolas','Poletti','nicolas@poletti.com','Poletti'),(7,'Abel','Murua','abel@murua.com','Abel'),(8,'Emiliano','Bernardi','emiliano@bernardi.com','EmilainoB'),(9,'Lisandro','Patricio','lisandro@patricio.com','LisandroP'),(10,'Nelson','Navier','nelson@navier.com','NelsonN');
 /*!40000 ALTER TABLE `personas` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping events for database 'Books'
+--
+
+--
+-- Dumping routines for database 'Books'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -109,4 +119,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-26 18:06:05
+-- Dump completed on 2021-05-26 19:28:09
