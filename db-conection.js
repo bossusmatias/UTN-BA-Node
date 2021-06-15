@@ -1,22 +1,24 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const { promisify } = require('util');
 
-const mysqlConection = mysql.createConnection({
+const mysqlPool = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: 'acceso',
     database: 'Books'
   });
 
-mysqlConection.connect((err) => {
+mysqlPool.getConnection(err => {
 
     if(err) {
-        throw err;
+        console.log('Error en la conexion con la DB');
+        return;
     }
     else {
-        console.log('Conexion con BD exitosa')
+        console.log('Conexion con BD exitosa');
     }
 });
 
-mysqlConection.query = promisify(mysqlConection.query).bind(mysqlConection);
-module.exports = mysqlConection;
+mysqlPool.query = promisify(mysqlPool.query).bind(mysqlPool);
+
+module.exports = mysqlPool;

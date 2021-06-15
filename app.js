@@ -8,12 +8,15 @@ const personasRoutes = require('./routes/personas-routes');
 const categoriasRoutes = require('./routes/categorias-routes');
 
 /** FORM/DATA */
+// app.use(express.JSON()); para formato JSON
 app.use(express.urlencoded());
+
 
 /** APP ROUTES */
 app.use('/libros', librosRoutes); // => /libros
-// app.use('/personas', personasRoutes); // => /personas
-app.use('/categorias', categoriasRoutes); // => /personas
+app.use('/personas', personasRoutes); // => /personas
+app.use('/categorias/', categoriasRoutes); // => /personas
+
 
 /** SERVER */
 app.listen(puerto,() => {

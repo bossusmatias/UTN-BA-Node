@@ -80,14 +80,14 @@ const updateCategoria = async (req, res, next) => {
   try {
 
 	  if (!categoriaName || !categoriaId) {
-		throw new Error ('Falta enviar el nombre de Categoria');
+			throw new Error ('Falta enviar el nombre de Categoria');
 	  }
 
 	  let respuesta = await db.query('UPDATE categorias SET nombre = (?) WHERE id = (?)', [categoriaName, categoriaId]);
 
 	  console.log(respuesta);
 
-	  res.status(200).send({'Se Agrego correctamene id': respuesta.insertId});
+	  res.status(200).send({'Se actualizo la categoria con el id': categoriaId});
 
   } catch(err) {
 

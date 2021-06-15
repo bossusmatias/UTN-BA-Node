@@ -4,11 +4,13 @@ const router = express.Router();
 
 const librosControllers = require('../controllers/libros-controllers');
 
-// => /Libros/
+// => /libros/
 router.get('/', librosControllers.getLibros);
 router.post('/', librosControllers.postLibro);
 router.get('/:id', librosControllers.getLibroPorId);
-router.patch('/:id', librosControllers.updateLibro);
+router.put('/:id', librosControllers.updateLibro);
+router.put('/prestar/:id', librosControllers.prestarLibro);
+router.put('/devolver/:id', librosControllers.devolverLibro);
 router.delete('/:id', librosControllers.deleteLibro);
 
 module.exports = router;
