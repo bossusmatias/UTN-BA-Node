@@ -15,7 +15,7 @@ app.use(express.urlencoded());
 /** APP ROUTES */
 app.use('/libros', librosRoutes); // => /libros
 app.use('/personas', personasRoutes); // => /personas
-app.use('/categorias/', categoriasRoutes); // => /categoria
+app.use('/categorias/', categoriasRoutes); // => /categorias
 
 
 /** SERVER */
